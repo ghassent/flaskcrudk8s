@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: tasksapp
-          image: ghassent/backendtest:falskcrudv0.2
+          image: ghassent/backendtest:falskcrudv0.4
           ports:
             - containerPort: 5000
           imagePullPolicy: Always

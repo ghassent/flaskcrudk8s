@@ -11,7 +11,7 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-app.config["MONGO_URI"] = "mongodb://mongo:27017/dev"
+app.config["MONGO_URI"] = "mongodb://mongo-0.mongo:27017,mongo-1.mongo:27017,mongo-2.mongo:27017,mongo-3.mongo:27017/dev?compressors=disabled&gssapiServiceName=mongodb&replicaSet=rs0"
 mongo = PyMongo(app)
 db = mongo.db
 @app.route("/")
